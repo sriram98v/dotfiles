@@ -211,7 +211,6 @@ exec_always feh --bg-scale /home/kuuhaku/Pictures/wallpaper.jpg
 
 assign [class="Google-chrome"] 2
 assign [class="code-oss"] 3
-assign [class="MATLAB R2020a - academic use"] 4
-assign [class="Slack"] 5
+assign [class="Slack"] 4
 
 
