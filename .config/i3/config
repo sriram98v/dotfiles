@@ -47,7 +47,7 @@ bindsym $mod+x exec --no-startup-id rofi -show  run
 bindsym $mod+c exec --no-startup-id code
 
 # Lock system
-bindsym $mod+shift+x exec i3lock -n --image /home/kuuhaku/Pictures/grub_wallpaper.png 
+bindsym $mod+shift+x exec i3lock -B=20 -k
 
 # change focus
 bindsym $mod+j focus left
@@ -205,6 +205,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec_always --no-startup-id picom -f --experimental-backends
 exec_always --no-startup-id feh --bg-scale /home/kuuhaku/Pictures/wallpaper.png 
+exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 assign [class="Google-chrome"] 2
 assign [class="code-oss"] 3
