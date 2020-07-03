@@ -17,3 +17,5 @@ elif [[ $num -lt 100 ]]; then
 fi
 
 echo $num > /sys/class/backlight/intel_backlight/brightness
+brightness=$(echo $((($(cat /sys/class/backlight/intel_backlight/brightness) * 100 )/ 120000 )))
+dunstify -i ~/.config/i3/scripts/icons/brightness.png -r 2593 -u normal "$brightness%" ""
