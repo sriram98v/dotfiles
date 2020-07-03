@@ -186,8 +186,8 @@ hide_edge_borders both
 
 exec_always --no-startup-id /home/kuuhaku/.config/polybar/scripts/launch.sh
 
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% && ~/.config/i3/scripts/volume.sh #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% && ~/.config/i3/scripts/volume.sh #decrease sound volume
 bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # OSX-like area selection screenshots
@@ -196,8 +196,8 @@ bindsym --release $mod+Shift+Print exec --no-startup-id scrot -s 'screenshot_%Y%
 bindsym $mod+Print exec scrot $HOME/Pictures/screenshots/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -i 20000 # increase screen brightness
-bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -d 20000 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -i 10000 # increase screen brightness
+bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -d 10000 # decrease screen brightness
 
 # Media player controls
 bindsym XF86AudioPlay exec playerctl play

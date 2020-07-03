@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 let a=$(cat /sys/class/backlight/intel_backlight/brightness)
 
