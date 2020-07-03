@@ -47,7 +47,7 @@ bindsym $mod+x exec --no-startup-id rofi -show  run
 bindsym $mod+c exec --no-startup-id code
 
 # Lock system
-bindsym $mod+shift+x exec i3lock -B=20 -k
+bindsym $mod+shift+x exec i3lock -B=1 -c 47474788  -k --composite
 
 # change focus
 bindsym $mod+j focus left
@@ -193,6 +193,8 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 # OSX-like area selection screenshots
 bindsym --release $mod+Shift+Print exec --no-startup-id scrot -s 'screenshot_%Y%m%d_%H%M%S.png' -e 'mkdir -p ~/Pictures/screenshots && mv $f ~/Pictures/screenshots && xclip -selection clipboard -t image/png -i ~/Pictures/screenshots/`ls -1 -t ~/Pictures/screenshots | head -1`' # Area selection
 
+bindsym $mod+Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
+
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -i 20000 # increase screen brightness
 bindsym XF86MonBrightnessDown exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -d 20000 # decrease screen brightness
@@ -205,7 +207,7 @@ bindsym XF86AudioPrev exec playerctl previous
 
 exec_always --no-startup-id picom -f --experimental-backends
 exec_always --no-startup-id feh --bg-scale /home/kuuhaku/Pictures/wallpaper.png 
-exec_always --no-startup-id dunst -config ~/.config/dunst/dunstrc
+exec --no-startup-id dunst -config ~/.config/dunst/dunstrc
 
 assign [class="Google-chrome"] 2
 assign [class="code-oss"] 3
