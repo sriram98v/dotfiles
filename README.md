@@ -1,5 +1,5 @@
 # Dotfiles
-Here are my personal desktop setup on Arch linux** with **i3-gaps** as window manager.
+Here are my personal desktop setup on Arch linux with **i3-gaps** as window manager.
 
 ## Desktop
 ![setup](.config/desktop.jpg)
