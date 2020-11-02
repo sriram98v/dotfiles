@@ -1,17 +1,81 @@
-configuration {                                                                                                                   
-width: 100;                                                                                                                       
-lines: 15;                                                                                                                        
-location: 0;
-bw: 0;                                                                                                                           
-show-icons: true;                                                                                                                 
-eh: 2;                                                                                                                            
-padding: 500;
-separator-style: "none";                                                                                                            
-hide-scrollbar: true;                                                                                                             
-fullscreen: true;                                                                                                                 
-font: "System San Francisco Display 18";
-color-normal: "argb:031d1f21, #f3f4f5, argb:031d1f21, argb:031d1f21, #9575cd";                                                    
-color-urgent: "argb:031d1f21, #f3f4f5, argb:bc303541, argb:031d1f21, #9575cd";                                                    
-color-active: "argb:031d1f21, #f3f4f5, argb:031d1f21, argb:031d1f21, #9575cd";                                                    
-color-window: "argb:c82d303b, #7c8389, #1d1f21";                                                                                  
+configuration {
+    display-drun:                   "Apps";
+    display-window:                 "Window";
+    show-icons:true;
 }
+ 
+* {  
+    lines: 15;
+    columns: 1;
+    background-color: #00000065;
+    border-color: #00000000;
+    text-color: #a6a6a6;
+    font: "SF Pro Text 16";
+}
+ 
+#window {
+    border: 0;
+    border-radius: 4px;
+    padding: 40;
+    width: 30%;
+    height: 50%;
+}
+ 
+#mainbox {
+    background-color: #00000000;
+    children: [inputbar, listview];
+    spacing: 10px;
+    /*margin: 20%;*/
+    padding: 30px 0;
+    border: 1px;
+    border-color: @base0D;
+}
+ 
+ 
+#listview {
+    background-color: #00000000;
+    fixed-height: 0;
+    border: 0px;
+    spacing: 5px;
+    scrollbar: false;
+    padding: 10px 10px 0px;
+}
+ 
+#element {
+    background-color: #00000000;
+    border: 0;
+    border-radius: 15px;
+    padding: 3 0  3 4 ;
+}
+ 
+#element selected {
+    background-color: #a6a6a6;
+    text-color: #000000;
+}
+ 
+ 
+#inputbar {
+    children:   [ prompt,textbox-prompt-colon,entry,case-indicator ];
+    background-color: #00000000;
+}
+ 
+#case-indicator {
+    background-color: #00000000;
+    spacing:    0;
+}
+#entry {
+    background-color: #00000000;
+    spacing:    0;
+}
+#prompt {
+    background-color: #00000000;
+    spacing:    0;
+}
+ 
+#textbox-prompt-colon {
+    background-color: #00000000;
+    expand:     false;
+    str:        ":";
+    margin:     0px 0.3em 0em 0em ;
+}
+
