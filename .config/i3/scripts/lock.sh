@@ -30,6 +30,7 @@ V='#117655bb'  # verifying
 --screen 1            \
 --blur 5              \
 --clock               \
+--composite
 --indicator           \
 --timestr="%H:%M:%S"  \
 --datestr="%A, %m %Y" \
