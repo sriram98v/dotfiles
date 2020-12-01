@@ -9,7 +9,7 @@ killall -q polybar
 while pgrep -u $UID -x polybar >/dev/null; do sleep 1; done
 
 #Launch bar1 and bar2
-polybar -c ~/.config/polybar/config.ini main>>/tmp/polybar1.log 2>&1 &
+polybar -c ~/.config/polybar/config.ini main>>/tmp/polybar_main.log 2>&1 &
 
 externmon=$(xrandr --query | grep 'HDMI-1-0')
 if [[ $externmon = *connected* ]]; then
