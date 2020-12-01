@@ -17,3 +17,4 @@ Here are my personal desktop setup on Arch linux with **i3-gaps** as window mana
 
 * **Terminal** = urxvt
 
+* **Dropdown menu** = i3-scratchpad
