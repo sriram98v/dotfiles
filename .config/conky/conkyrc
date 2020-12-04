@@ -77,6 +77,6 @@ conky.config = {
 conky.text = [[
 ${color5}${font Open Sans Light:size=70}${time %H}${color1}${font Open Sans Light:size=70}${time :%M}${font}
 $hr
-${color1}${font Open Sans Light:size=20}${time %A %d %B} ${time %e}${font}
+${color1}${font Open Sans Light:size=20}${time %A, }${color5}${time %B} ${time %e}${font}
 ]]
 
