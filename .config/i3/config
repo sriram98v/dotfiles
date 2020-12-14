@@ -85,7 +85,7 @@ bindsym $mod+v split v
 bindsym $mod+f fullscreen toggle
 
 # change container layout (stacked, tabbed, toggle split)
-bindsym $mod+s layout stacking
+bindsym $mod+Shift+s layout stacking
 bindsym $mod+t layout tabbed
 bindsym $mod+e layout toggle split
 
@@ -138,7 +138,7 @@ bindsym $mod+Shift+0 move container to workspace number $ws10
 assign [class="Google-chrome"] $ws2
 assign [class="code-oss"] $ws3
 assign [class="Slack"] $ws4
-assign [class="zoom"] $ws5
+assign [class="zoom"] $ws1
 assign [class="vlc"] $ws1
 
 # reload the configuration file
@@ -217,6 +217,12 @@ bindsym $mod+Print exec scrot $HOME/Pictures/`date +%Y-%m-%d_%H:%M:%S`.png
 
 # Dropdown whatsapp messenger
 bindsym $mod+w exec ~/.config/i3/scripts/whatsapp.sh
+
+# Dropdown YT music
+bindsym $mod+s exec ~/.config/i3/scripts/yt.sh
+
+# Dropdown file manager
+bindsym $mod+Shift+f exec ~/.config/i3/scripts/fm.sh
 
 # Sreen brightness controls
 bindsym XF86MonBrightnessUp exec --no-startup-id $HOME/.config/i3/scripts/brightness.sh -i 10000 # increase screen brightness
